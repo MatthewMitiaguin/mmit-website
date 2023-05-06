@@ -21,7 +21,7 @@ const links = [
     text: "LeetCode profile",
     url: "https://leetcode.com/mmitiaguin/",
     description:
-      "Pretty underwhelming, I know",
+      "Data Structures & Algorithm stuff",
     color: "#0D96F2",
   }
 ]
