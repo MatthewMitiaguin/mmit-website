@@ -57,7 +57,12 @@ const IndexPage: React.FC<PageProps> = () => {
         </ul>
       </div>
       <div className="blogStyles">
-        <FadedVerticalRule height={400} width={5} color="purple" />
+        <FadedVerticalRule height={521.5} width={5} color="purple" />
+      </div>
+      <div className="projectStyles">
+        <h1>
+          Projects!
+        </h1>
       </div>
     </main>
   );
