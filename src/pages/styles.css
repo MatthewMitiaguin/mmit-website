@@ -2,6 +2,9 @@
   color: #232129;
   padding: 96px;
   font-family: -apple-system, Roboto, sans-serif, serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .headingStyles {
@@ -30,9 +33,11 @@
   margin-bottom: 30px;
 }
 
-.bioDescriptionStyle {
-
+.bioStyles{
+  width: 300px;
+  padding-right: 50px
 }
+
 .linkStyle {
   color: #8954A8;
   font-weight: bold;

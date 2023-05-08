@@ -37,7 +37,6 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <span className="headingAccentStyles">— my homepage! 🎉😎🎉😎🎉</span>
         </h1>
-        <FadedHorizontalRule />
         <p className="paragraphStyles">
           Software Engineer & Outdoors enthusiast
         </p>
@@ -58,7 +57,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </ul>
       </div>
       <div className="blogStyles">
-        <FadedVerticalRule height={50} width={5} color="purple" />
+        <FadedVerticalRule height={400} width={5} color="purple" />
       </div>
     </main>
   );
