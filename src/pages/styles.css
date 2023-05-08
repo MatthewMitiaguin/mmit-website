@@ -6,7 +6,7 @@
 
 .headingStyles {
   margin-top: 0;
-  margin-bottom: 64px;
+  margin-bottom: 16px;
   max-width: 320px;
 }
 
@@ -30,6 +30,9 @@
   margin-bottom: 30px;
 }
 
+.bioDescriptionStyle {
+
+}
 .linkStyle {
   color: #8954A8;
   font-weight: bold;
