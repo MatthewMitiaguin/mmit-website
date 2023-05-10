@@ -35,6 +35,6 @@ deploy-s3:
     - aws cloudfront create-invalidation --distribution-id E5JESDDYE4WTE --paths '/*'
   environment:
     name: ${CI_COMMIT_REF_SLUG}
-    url: http://${BUCKET_NAME_PRODUCTION}.s3.eu-west-3.amazonaws.com
+    url: http://${BUCKET_NAME_PRODUCTION}.s3-website-ap-southeast-2.amazonaws.com
   only:
     - main
