@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  BUCKET_NAME_PRODUCTION: mattmitiaguin.com
+
+build-assets:
+  image: "node:10.16.3"
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+      - .yarn/
+  before_script:
+    - apt-get install git
+  script:
+    - yarn install --non-interactive --cache-folder .yarn
+    - yarn build
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
+deploy-s3:
+  image: "python:latest"
+  stage: deploy
+  dependencies:
+    - build-assets
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 sync public s3://${BUCKET_NAME_PRODUCTION}/ --delete
+    - aws cloudfront create-invalidation --distribution-id E5JESDDYE4WTE --paths '/*'
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    url: http://${BUCKET_NAME_PRODUCTION}.s3.eu-west-3.amazonaws.com
+  only:
+    - main
