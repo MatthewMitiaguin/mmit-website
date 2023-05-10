@@ -1,6 +1,9 @@
 .pageStyles {
+  
   color: #232129;
-  padding: 96px;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-top: 25px;
   font-family: -apple-system, Roboto, sans-serif, serif;
   display: flex;
   flex-direction: row;
@@ -45,6 +48,13 @@
   width: 300px;
   padding-right: 50px;
 }
+
+@media only screen and (min-width: 1300px) {
+  .bioStyles {
+    margin-left: -200px;
+  }
+}
+
 
 .linkStyle {
   color: #8954A8;
