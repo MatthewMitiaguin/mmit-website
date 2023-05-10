@@ -2,6 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import FadedHorizontalRule from '../components/FadedHorizontalRule';
 import FadedVerticalRule from '../components/FadedVerticalRule';
+import Article from '../components/Article';
 import './styles.css';
 
 const links = [
@@ -38,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <span className="headingAccentStyles">— my homepage! 🎉😎🎉😎🎉</span>
         </h1>
         <p className="paragraphStyles">
-          Software Engineer & Outdoors enthusiast
+          Software Engineer & Skiing Enthusiast
         </p>
         <ul className="listStyles">
           {links.map(link => (
@@ -60,9 +61,14 @@ const IndexPage: React.FC<PageProps> = () => {
         <FadedVerticalRule height={521.5} width={5} color="purple" />
       </div>
       <div className="projectStyles">
-        <h1>
-          Projects!
-        </h1>
+        <div>
+          <Article 
+            title="My Website"
+            description="Attempting to make my homepage"
+            dateofarticle="May 2023"
+            category="Web Development"
+          />
+        </div>
       </div>
     </main>
   );
@@ -70,4 +76,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Matt Mitiaguin</title>;
+export const Head: HeadFC = () => <title>mattmitiaguin</title>;
