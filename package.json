@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "deploy": "gatsby-plugin-s3 deploy",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",

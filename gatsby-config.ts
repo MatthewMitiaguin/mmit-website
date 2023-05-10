@@ -21,6 +21,12 @@ const config: GatsbyConfig = {
       "path": "./src/images/"
     },
     __key: "images"
+  },
+  {
+    resolve: `gatsby-plugin-s3`,
+    options: {
+      bucketName: "mattmitiaguin.com",
+    },
   }]
 };
 
