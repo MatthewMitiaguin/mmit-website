@@ -1,6 +1,5 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import FadedHorizontalRule from '../components/FadedHorizontalRule';
 import FadedVerticalRule from '../components/FadedVerticalRule';
 import Article from '../components/Article';
 import './styles.css';
@@ -57,7 +56,7 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </ul>
       </div>
-      <div className="blogStyles">
+      <div className="horizontalStyles">
         <FadedVerticalRule height={521.5} width={5} color="purple" />
       </div>
       <div className="projectStyles">
