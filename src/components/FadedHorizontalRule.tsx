@@ -1,20 +1,27 @@
-import React from 'react';
+import React from "react";
 
-interface Props {
-  height?: string;
-  color?: string;
+interface FadedHorizontalRuleProps {
+  height: number;
+  width: number;
+  color: string;
 }
 
-const FadedHorizontalRule: React.FC<Props> = ({ height = '1px', color = '#ccc' }) => (
-  <hr
-    style={{
-      height,
-      border: 'none',
-      backgroundColor: color,
-      opacity: 0.8,
-      margin: 0,
-    }}
-  />
-);
+const FadedHorizontalRule: React.FC<FadedHorizontalRuleProps> = ({
+  height,
+  width,
+  color,
+}) => {
+  const gradient = `linear-gradient(to left, transparent, ${color}, transparent), linear-gradient(to right, transparent, ${color}, transparent)`;
+
+  const styles = {
+    height: `${height}px`,
+    width: `${width}px`,
+    backgroundImage: gradient,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "0% 50%",
+  };
+
+  return <div style={styles} />;
+};
 
 export default FadedHorizontalRule;

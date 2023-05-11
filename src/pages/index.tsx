@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import FadedVerticalRule from '../components/FadedVerticalRule';
+import FadedHorizontalRule from "../components/FadedHorizontalRule";
 import Article from '../components/Article';
 import './styles.css';
 
@@ -56,8 +57,11 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </ul>
       </div>
-      <div className="horizontalStyles">
+      <div className="verticalStyles">
         <FadedVerticalRule height={521.5} width={5} color="purple" />
+      </div>
+      <div className="horizontalStyles">
+        <FadedHorizontalRule height={1} width={521.5} color="black" />
       </div>
       <div className="projectStyles">
         <div>
