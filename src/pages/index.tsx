@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import FadedVerticalRule from '../components/FadedVerticalRule';
 import FadedHorizontalRule from "../components/FadedHorizontalRule";
 import Article from '../components/Article';
+import ImageDiv from '../components/ImageDiv';
 import './styles.css';
 
 const links = [
@@ -64,14 +65,13 @@ const IndexPage: React.FC<PageProps> = () => {
         <FadedHorizontalRule height={1} width={521.5} color="black" />
       </div>
       <div className="projectStyles">
-        <div>
           <Article 
             title="My Website"
             description="Attempting to make my homepage"
             dateofarticle="May 2023"
             category="Web Development"
           />
-        </div>
+          <ImageDiv imageName="webpagearchitecture.png" />
       </div>
     </main>
   );

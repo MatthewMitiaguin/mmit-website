@@ -11,13 +11,22 @@
   overflow: hidden;
 }
 
+.projectStyles{
+  display: flex;
+  width: 500px;
+  height: 550px;
+  margin-left: 100px;
+  flex-direction: column;
+
+}
+
 @media only screen and (min-width: 320px) {
   .headingStyles {
     padding-left: 0px;
     justify-content: center
   }
   .projectStyles {
-    padding-left: 0px;
+    margin-left: 125px;
   }
   .pageStyles {
     padding-left: 150px;
@@ -80,15 +89,6 @@
   .horizontalStyles {
     display: none;
   }
-}
-
-
-
-.projectStyles{
-  display: flex;
-  width: 500px;
-  height: 550px;
-  margin-left: 100px;
 }
 
 .headingStyles {
