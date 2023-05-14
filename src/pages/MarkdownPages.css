@@ -1,0 +1,10 @@
+.markdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .markdown {
+    max-width: 80%;
+  }
