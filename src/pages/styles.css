@@ -20,6 +20,15 @@
 
 }
 
+.websiteAwsStyles {
+  overflow: hidden;
+}
+
+.websiteAwsStyles img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 320px) {
   .headingStyles {
     padding-left: 0px;

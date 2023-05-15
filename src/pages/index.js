@@ -68,7 +68,7 @@ const IndexPage = () => {
             description="Attempting to make my homepage"
             dateofarticle="MAY 2023"
             category="Web Development"
-            url="./blog/making-my-website"
+            url="/public/blog/making-my-website/index.html"
           />
           <Article 
             title="AWS Minecraft Server"
