@@ -1,7 +1,7 @@
 ---
 title: "Developing my website"
 slug: "/blog/making-my-website"
-date: "2021-08-01"
+date: "2023-05-15"
 ---
 
 ## My site
