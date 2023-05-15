@@ -11,7 +11,7 @@ export default function BlogPostTemplate({
       <div>
         <h1 style={{textAlign: "center"}}>{frontmatter.title}</h1>
         <h2 style={{textAlign: "center"}}>{frontmatter.date}</h2>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", maxWidth: "650px", margin: "0 auto"}} className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
   )
