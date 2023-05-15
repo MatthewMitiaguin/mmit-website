@@ -1,5 +1,4 @@
-import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import * as React from "react"
 import FadedVerticalRule from '../components/FadedVerticalRule';
 import FadedHorizontalRule from "../components/FadedHorizontalRule";
 import Article from '../components/Article';
@@ -27,9 +26,9 @@ const links = [
       "Data Structures & Algorithm stuff",
     color: "#0D96F2",
   }
-];
+]
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = () => {
   return (
     <main className="pageStyles">
       <div className="bioStyles">
@@ -73,9 +72,9 @@ const IndexPage: React.FC<PageProps> = () => {
           />
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
-export const Head: HeadFC = () => <title>mattmitiaguin</title>;
+export const Head = () => <title>Home Page</title>

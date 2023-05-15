@@ -1,16 +1,6 @@
 import React from "react";
 
-interface FadedVerticalRuleProps {
-  height: number;
-  width: number;
-  color: string;
-}
-
-const FadedVerticalRule: React.FC<FadedVerticalRuleProps> = ({
-  height,
-  width,
-  color,
-}) => {
+const FadedVerticalRule = ({ height, width, color }) => {
   const gradient = `linear-gradient(to bottom, ${color}, transparent ${height}px)`;
 
   const styles = {

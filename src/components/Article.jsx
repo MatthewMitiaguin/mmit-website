@@ -1,14 +1,6 @@
 import React from "react";
 
-interface ArticleProps {
-  title: string;
-  description: string;
-  dateofarticle: string;
-  category: string;
-  url: string;
-}
-
-const Article: React.FC<ArticleProps> = ({ title, description, dateofarticle, category, url }) => {
+const Article = ({ title, description, dateofarticle, category, url }) => {
   return (
     <div>
       <div style={{ display: "flex" }}>
