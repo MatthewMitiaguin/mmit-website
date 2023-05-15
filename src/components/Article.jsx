@@ -2,7 +2,7 @@ import React from "react";
 
 const Article = ({ title, description, dateofarticle, category, url }) => {
   return (
-    <div>
+    <div style={{ marginBottom: "50px" }}>
       <div style={{ display: "flex" }}>
         <h4 style={{ marginRight: "10px" }}>{dateofarticle}</h4>
         <h5>{category}</h5>

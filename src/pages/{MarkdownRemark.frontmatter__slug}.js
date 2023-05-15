@@ -7,13 +7,11 @@ export default function BlogPostTemplate({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <div>
+    <div style={{ fontFamily: "-apple-system, Roboto, sans-serif, serif"}}>
       <div>
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <h1 style={{textAlign: "center"}}>{frontmatter.title}</h1>
+        <h2 style={{textAlign: "center"}}>{frontmatter.date}</h2>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
   )

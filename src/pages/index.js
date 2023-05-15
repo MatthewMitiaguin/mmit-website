@@ -35,7 +35,7 @@ const IndexPage = () => {
         <h1 className="headingStyles">
           Matthew Mitiaguin
           <br />
-          <span className="headingAccentStyles">— my homepage! 🎉😎🎉😎🎉</span>
+          <span className="headingAccentStyles">— my homepage! ☁️😎☁️😎☁️</span>
         </h1>
         <p className="paragraphStyles">
           Software Engineer & Skiing Enthusiast
@@ -68,8 +68,16 @@ const IndexPage = () => {
             description="Attempting to make my homepage"
             dateofarticle="MAY 2023"
             category="Web Development"
-            url="./website.tsx"
+            url="./blog/making-my-website"
           />
+          <Article 
+            title="AWS Minecraft Server"
+            description="Minecraft server hosted in AWS"
+            dateofarticle="NOV 2022"
+            category="Cloud"
+            url="./blog/minecraft-aws"
+          />
+
       </div>
     </main>
   )

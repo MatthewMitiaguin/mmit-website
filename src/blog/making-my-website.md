@@ -1,9 +1,17 @@
 ---
-title: "Making my website"
+title: "Developing my website"
 slug: "/blog/making-my-website"
 date: "2021-08-01"
 ---
 
-## What I'm Working On
+## My site
 
-Right now, I'm working through a [DigitalOcean tutorial](https://www.digitalocean.com/community/tutorials) on using [Gatsby](https://www.gatsbyjs.com/) with Markdown.
+This is my website, I used GatsbyJS which is a static site generator
+
+It is hosted with AWS Infrastructure, here is a diagram on how it works
+
+![AWS Diagram](webpagearchitecture.png)
+
+- [x] Make it mobile friendly
+- [ ] Update the navigation between pages
+- [ ] Add navigation between categories
