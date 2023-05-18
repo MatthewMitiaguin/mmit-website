@@ -14,5 +14,6 @@ My website was built with GatsbyJS, a static site generator. Instead of creating
 
 ![IAMRoles Diagram](https://s3.ap-southeast-2.amazonaws.com/mattmitiaguin.com/src/blog/images/iamroles.png)
 
-- [ ] Update CloudFormation so that it doesn't require setup via AWS Console
-- [ ] Automate deployments
+- [x] Make it more mobile friendly
+- [ ] Update the navigation between pages
+- [ ] Create CI/CD instead of manually uploading to S3 via CLI
