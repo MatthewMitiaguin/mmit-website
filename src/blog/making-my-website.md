@@ -4,16 +4,15 @@ slug: "/blog/making-my-website"
 date: "2023-05-15"
 ---
 
-## My site
+## Design & Architecture
 
-This is my website, I used GatsbyJS which is a static site generator. I used Gatsby plugins to read and understand markdown folders instead of creating unique JS pages for each blog post. Using GraphQL it reads the markdown file and injects it into Gatsby using a data prop. This allows me to have all the customization centralised in one component.
-
-It is hosted with AWS Infrastructure, below is an architecture diagram on how it works.
+My website was built with GatsbyJS, a static site generator. Instead of creating individual JS pages for each blog post, I utilized Gatsby plugins to parse and interpret markdown folders. With the help of GraphQL, Gatsby can extract the data from the markdown files and inject it into a data prop, which can be centralized in a single component for easy customization. The website is hosted on AWS Infrastructure and the following architecture diagram illustrates how it operates.
 
 ![AWS Diagram](https://s3.ap-southeast-2.amazonaws.com/mattmitiaguin.com/src/blog/webpagearchitecture_50.png)
 
-- [x] Make it more mobile friendly
-- [ ] Update the navigation between pages
-- [ ] Add navigation between categories
-- [ ] Create CI/CD instead of manually uploading to S3 via CLI
-- [ ] Add tests before deploying straight to S3
+ I opted to utilize two accounts: a "dev" and "production" account. Using the IAM service, an IAM User will be assigned an IAM Role that has minimal privileges, enabling them to make minor adjustments to the S3 bucket and CloudFront settings.
+
+![IAMRoles Diagram](https://s3.ap-southeast-2.amazonaws.com/mattmitiaguin.com/src/blog/images/iamroles.png)
+
+- [ ] Update CloudFormation so that it doesn't require setup via AWS Console
+- [ ] Automate deployments
