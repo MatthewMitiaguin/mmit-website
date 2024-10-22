@@ -18,13 +18,6 @@ const links = [
     description:
       "My 'professional' social media page",
     color: "#1099A8",
-  },
-  {
-    text: "LeetCode profile",
-    url: "https://leetcode.com/mmitiaguin/",
-    description:
-      "Data Structures & Algorithm stuff",
-    color: "#0D96F2",
   }
 ]
 
@@ -64,20 +57,19 @@ const IndexPage = () => {
       </div>
       <div className="projectStyles">
           <Article 
+            title="AWS Minecraft Server"
+            description="Minecraft server hosted in AWS"
+            dateofarticle="MAY 2023"
+            category="Cloud"
+            url="/public/blog/minecraft-aws/index.html"
+          />
+          <Article 
             title="My Website"
             description="Attempting to make my homepage"
             dateofarticle="MAY 2023"
             category="Web Development"
             url="/public/blog/making-my-website/index.html"
           />
-          <Article 
-            title="AWS Minecraft Server"
-            description="Minecraft server hosted in AWS"
-            dateofarticle="NOV 2022"
-            category="Cloud"
-            url="./blog/minecraft-aws"
-          />
-
       </div>
     </main>
   )
