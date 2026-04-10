@@ -1,24 +1,31 @@
 import * as React from "react"
-import { graphql } from "gatsby"
-import './styles.css';
+import { graphql, Link } from "gatsby"
+import "./blog-post.css"
 
-export default function BlogPostTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+export default function BlogPostTemplate({ data }) {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
   return (
-    <div style={{ fontFamily: "-apple-system, Roboto, sans-serif, serif"}}>
-      <div>
-        <h1 style={{textAlign: "center"}}>{frontmatter.title}</h1>
-        <h2 style={{textAlign: "center"}}>{frontmatter.date}</h2>
-        <div className="websiteAwsStyles">
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", maxWidth: "650px", margin: "0 auto"}} className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-      </div>
-    </div>
+    <main className="blogPage">
+      <nav className="blogNav">
+        <Link to="/" className="blogBack">← Back</Link>
+      </nav>
+      <header className="blogHeader">
+        <span className="blogDate">{frontmatter.date}</span>
+        <h1 className="blogTitle">{frontmatter.title}</h1>
+      </header>
+      <article
+        className="blogContent"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </main>
   )
 }
+
+export const Head = ({ data }) => (
+  <title>{data.markdownRemark.frontmatter.title}</title>
+)
 
 export const pageQuery = graphql`
   query($id: String!) {

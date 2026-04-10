@@ -1,179 +1,129 @@
+:root {
+  --color-text: #232129;
+  --color-accent: #663399;
+  --color-link: #8954A8;
+  --font-base: -apple-system, Roboto, sans-serif, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .pageStyles {
-  color: #232129;
-  padding-left: 96px;
-  padding-right: 96px;
-  padding-top: 25px;
-  font-family: -apple-system, Roboto, sans-serif, serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  color: var(--color-text);
+  font-family: var(--font-base);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-.projectStyles{
+/* On wider screens: bio | divider | articles side by side */
+@media (min-width: 768px) {
+  .pageStyles {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: start;
+    gap: 0;
+    padding: 3rem 2rem;
+  }
+}
+
+/* Bio column */
+.bioStyles {
   display: flex;
-  width: 500px;
-  height: 550px;
-  margin-left: 100px;
   flex-direction: column;
-
+  min-width: 0;
 }
 
-.websiteAwsStyles {
-  overflow: hidden;
-}
-
-.websiteAwsStyles img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media only screen and (min-width: 320px) {
-  .headingStyles {
-    padding-left: 0px;
-    justify-content: center
-  }
-  .projectStyles {
-    margin-left: 125px;
-  }
-  .pageStyles {
-    padding-left: 150px;
-  }
-  .listStyles {
-    padding-left: 80px;
-  }
-  .horizontalStyles {
-    display: block;
-  }
-  .pageStyles{
-    overflow: hidden;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .projectStyles {
-    padding-left: 0px;
-  }
-  .verticalStyles {
-    height: 691.5px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .verticalStyles {
-    height: 521.5px;
-    margin-top: -50px;
-  }
-}
-
-
-@media only screen and (min-width: 1440px) {
-  .verticalStyles {
-    margin-top: 0px;
-    height: 521.5px;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  .pageStyles {
-    flex-direction: column;
-  }
-
-  .bioStyles{
-    width: 300px;
-    padding-right: 50px;
-  }
-
-  .verticalStyles {
-    display: none;
-  }
-
-  .horizontalStyles {
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .horizontalStyles {
-    display: none;
+@media (min-width: 768px) {
+  .bioStyles {
+    padding-right: 3rem;
+    max-width: 340px;
   }
 }
 
 .headingStyles {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 0;
-  margin-bottom: 16px;
-  max-width: 320px;
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 4vw, 1.75rem);
 }
 
 .headingAccentStyles {
-  color: #663399;
+  color: var(--color-accent);
+  font-size: 0.9em;
 }
 
 .paragraphStyles {
-  margin-bottom: 48px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 .listStyles {
-  margin-bottom: 96px;
+  margin-bottom: 2rem;
   padding-left: 0;
+  list-style: none;
 }
 
 .listItemStyles {
   font-weight: 300;
-  font-size: 24px;
-  max-width: 560px;
-  margin-bottom: 30px;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
-
-.bioStyles{
-  width: 300px;
-  padding-right: 50px;
-}
-
-@media only screen and (min-width: 1300px) {
-  .bioStyles {
-    margin-left: -200px;
-  }
-}
-
 
 .linkStyle {
-  color: #8954A8;
+  color: var(--color-link);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   vertical-align: 5%;
 }
 
 .descriptionStyle {
-  color: #232129;
-  font-size: 14px;
-  margin-top: 10px;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
-  line-height: 1.25;
+  line-height: 1.4;
 }
 
-.badgeStyle {
-  color: #fff;
-  background-color: #088413;
-  border: 1px solid #088413;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  padding: 4px 6px;
-  display: inline-block;
-  position: relative;
-  top: -2px;
-  margin-left: 10px;
-  line-height: 1;
+/* Vertical divider — only shows on wide screens */
+.verticalStyles {
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .verticalStyles {
+    display: flex;
+    align-items: stretch;
+    margin: 0 2rem;
+  }
+}
+
+/* Horizontal divider — only shows on narrow screens */
+.horizontalStyles {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .horizontalStyles {
+    display: none;
+  }
+}
+
+/* Articles column */
+.projectStyles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .projectStyles {
+    padding-left: 2rem;
+  }
+}
