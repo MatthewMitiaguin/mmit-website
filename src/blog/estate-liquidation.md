@@ -12,19 +12,18 @@ I got introduced through a mutual contact to someone who runs an estate liquidat
 
 1. Worker opens the app and creates a **Project** (the property/estate)
 2. Under that project they start a **Job** (a walkthrough session)
-3. For each item they photograph it in-app
-4. The photo is sent to the **Claude Vision API** which returns a structured inventory entry, item name, description, condition, estimated value range, category and auction suitability
+3. For each item they photograph it in app
+4. The photos are sent to the **Claude Vision API** which returns a structured inventory entry, item name, description, condition, estimated value range, category and auction suitability
 5. The worker reviews, edits and sets a **disposition tag** before saving (`sell` / `donate` / `keep` / `throw` / `hold` / `tbc`)
 6. At the end of a job a **PDF report** is generated from the underlying JSON
-7. Auction houses can subscribe to access inventory via a **REST API**, sell-tagged items only, filterable by date, category and condition
+7. Auction houses can subscribe to access inventory via a **REST API**
 
 ## Tech Stack
 
-- **React Native (Expo)** — iOS first, I wanted to avoid native Swift/Xcode complexity and Expo handles camera, file system and cross-platform stuff out of the box
-- **AWS** — API Gateway, Lambda, S3, DynamoDB
-- **Terraform** — IaC rather than CDK this time, keeping it cloud-agnostic for a potential future GCP migration
-- **Anthropic API (Claude)** — direct API rather than Bedrock, simpler for a prototype and not AWS specific
-- **PDF generation Lambda** — renders job JSON into a formatted report
+- **React Native (Expo)** —> iOS first, I wanted to avoid native Swift/Xcode complexity and Expo handles camera, file system and cross-platform stuff out of the box
+- **AWS** —> API Gateway, Lambda, S3, DynamoDB, IAM etc
+- **Terraform** —> keeping it cloud-agnostic for a potential future GCP migration
+- **Anthropic API (Claude)** —> direct API rather than Bedrock, simpler for a prototype and not AWS specific
 
 ## Architecture
 
