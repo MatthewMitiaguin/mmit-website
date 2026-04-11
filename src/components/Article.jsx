@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const Article = ({ title, description, dateofarticle, category, url }) => {
   return (
@@ -8,9 +9,9 @@ const Article = ({ title, description, dateofarticle, category, url }) => {
         <h5>{category}</h5>
       </div>
       <h2 style={{ margin: 0 }}>
-        <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to={url} style={{ textDecoration: "none", color: "inherit" }}>
           {title}
-        </a>
+        </Link>
       </h2>
       <p>{description}</p>
     </div>

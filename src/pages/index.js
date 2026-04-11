@@ -45,7 +45,7 @@ const IndexPage = () => {
         </ul>
       </div>
       <div className="verticalStyles">
-        <FadedVerticalRule height={500} width={5} color="purple" />
+        <FadedVerticalRule height={500} width={5} color="#1a7fc1" />
       </div>
       <div className="horizontalStyles">
         <FadedHorizontalRule height={1} width="100%" color="black" />
