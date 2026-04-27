@@ -52,6 +52,13 @@ const IndexPage = () => {
       </div>
       <div className="projectStyles">
         <Article
+          title="Snow Tracker"
+          description="AWS Lambda + Discord bot that scrapes snow conditions from Australian ski resorts, scores them out of 10, and pings you when it's worth going."
+          dateofarticle="APR 2026"
+          category="AWS / Automation"
+          url="/blog/snow-tracker"
+        />
+        <Article
           title="Estate Liquidation App"
           description="A mobile app for estate liquidation field workers — photograph items, get AI-generated inventory entries via Claude vision, and export clean PDF reports."
           dateofarticle="APR 2026"
