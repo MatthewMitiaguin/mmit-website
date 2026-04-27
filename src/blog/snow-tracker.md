@@ -75,7 +75,7 @@ pnpm start alerts
 
 ## AWS Deployment Design
 
-![Architecture](https://s3.ap-southeast-2.amazonaws.com/mattmitiaguin.com/src/blog/images/snowarchitecture.png)
+![Architecture](https://s3.ap-southeast-2.amazonaws.com/mattmitiaguin.com/src/blog/images/snowarchitecture1.png)
 
 - AWS Lambda runs the alert job
 - EventBridge Scheduler triggers it on a schedule
